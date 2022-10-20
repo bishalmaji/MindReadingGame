@@ -28,6 +28,7 @@ import com.flaviofaria.kenburnsview.KenBurnsView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 import retrofit2.Call;
@@ -36,19 +37,20 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 
 public class MainActivity extends AppCompatActivity {
-    ArrayList<String> list=new ArrayList<>();
-    String [] categoryArray={"magic","girls","blossom","lifestyle","food","wings","car","smiling","party","Nature","monuments","luxury","rain","spring","eco","blossom","health","wings","surf","festival"};
+    ArrayList<String> list = new ArrayList<>();
+    String[] categoryArray = {"magic", "girls", "blossom", "lifestyle", "food", "wings", "car", "smiling", "party", "Nature", "monuments", "luxury", "rain", "spring", "eco", "blossom", "health", "wings", "surf", "festival"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ImageButton launchGame=findViewById(R.id.goBtn);
+        ImageButton launchGame = findViewById(R.id.goBtn);
         launchGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(MainActivity.this,GameActivity.class);
+                Intent intent = new Intent(MainActivity.this, GameActivity.class);
                 intent.putStringArrayListExtra("imageArray", list);
-              startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(MainActivity.this).toBundle());
+                startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(MainActivity.this).toBundle());
             }
         });
         View decorView = getWindow().getDecorView();
@@ -62,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
                                 public void run() {
                                     hideSystemBar();
                                 }
-                            },2000);
+                            }, 2000);
                             // TODO: The system bars are visible. Make any desired
                             // adjustments to your UI, such as showing the action bar or
                             // other navigational controls.
@@ -79,9 +81,7 @@ public class MainActivity extends AppCompatActivity {
         getImages();
 
     }
-    private int getRandomNo(int a,int b){
-        return ThreadLocalRandom.current().nextInt(a,b+1);
-    }
+
 
     private void hideSystemBar() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
@@ -89,8 +89,7 @@ public class MainActivity extends AppCompatActivity {
 
             if (controller != null)
                 controller.hide(WindowInsets.Type.statusBars());
-        }
-        else {
+        } else {
 
             getWindow().getDecorView().setSystemUiVisibility(
                     View.SYSTEM_UI_FLAG_FULLSCREEN
@@ -103,42 +102,45 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private KenBurnsView i1,i2,i3,i4,i5,i6,i7,i8,i9,i10,i11,i12,i13,i14,i15,i16,i17,i18,i19,i20,i21;
-    private void init(){
-        i1=findViewById(R.id.imageView16);
-        i2=findViewById(R.id.imageView15);
-        i3=findViewById(R.id.imageView14);
-        i4=findViewById(R.id.imageView13);
-        i5=findViewById(R.id.imageView12);
-        i6=findViewById(R.id.imageView11);
-        i7=findViewById(R.id.imageView10);
-        i8=findViewById(R.id.imageView9);
-        i9=findViewById(R.id.imageView8);
-        i10=findViewById(R.id.imageView7);
-        i11=findViewById(R.id.imageView6);
-        i12=findViewById(R.id.imageView5);
-        i13=findViewById(R.id.imageView4);
-        i14=findViewById(R.id.imageView3);
-        i15=findViewById(R.id.imageView2);
-        i16=findViewById(R.id.imageView17);
-        i17=findViewById(R.id.imageView18);
-        i18=findViewById(R.id.imageView19);
-        i19=findViewById(R.id.imageView20);
-        i20=findViewById(R.id.imageView21);
-        i21=findViewById(R.id.imageView22);
+    private KenBurnsView i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21;
+
+    private void init() {
+        i1 = findViewById(R.id.imageView16);
+        i2 = findViewById(R.id.imageView15);
+        i3 = findViewById(R.id.imageView14);
+        i4 = findViewById(R.id.imageView13);
+        i5 = findViewById(R.id.imageView12);
+        i6 = findViewById(R.id.imageView11);
+        i7 = findViewById(R.id.imageView10);
+        i8 = findViewById(R.id.imageView9);
+        i9 = findViewById(R.id.imageView8);
+        i10 = findViewById(R.id.imageView7);
+        i11 = findViewById(R.id.imageView6);
+        i12 = findViewById(R.id.imageView5);
+        i13 = findViewById(R.id.imageView4);
+        i14 = findViewById(R.id.imageView3);
+        i15 = findViewById(R.id.imageView2);
+        i16 = findViewById(R.id.imageView17);
+        i17 = findViewById(R.id.imageView18);
+        i18 = findViewById(R.id.imageView19);
+        i19 = findViewById(R.id.imageView20);
+        i20 = findViewById(R.id.imageView21);
+        i21 = findViewById(R.id.imageView22);
 
 
     }
+
     private void getImages() {
         Retrofit retrofit = RetrofitClient.getRetrofitInstance();
         ImageApi api = retrofit.create(ImageApi.class);
-        int random=getRandomNo(0,19);
-        String category=categoryArray[random];
-        Call<Root> call = api.getImages(category,1,100);
+        Random r = new Random();
+        int random = r.nextInt(20);
+        String category = categoryArray[random];
+        Call<Root> call = api.getImages(category, 1, 100);
         call.enqueue(new Callback<Root>() {
             @Override
             public void onResponse(Call<Root> call, Response<Root> response) {
-                if (response.body()!=null){
+                if (response.body() != null) {
                     for (int i = 0; i < 21; i++) {
                         list.add(response.body().getResults().get(i).getUrls().getRegular());
                     }
@@ -148,15 +150,15 @@ public class MainActivity extends AppCompatActivity {
             }
 
 
-
             @Override
             public void onFailure(Call<Root> call, Throwable t) {
-                Toast.makeText(MainActivity.this, "fail"+t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "fail" + t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
                 list.add(null);
             }
         });
 
     }
+
     private void setImages() {
         Glide.with(this).load(list.get(0)).into(i1);
         Glide.with(this).load(list.get(1)).into(i2);
