@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="SpeakableTextPresentCheck"
+    >
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".MainActivity"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:id="@+id/imageView22"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView21"
+                app:layout_constraintTop_toBottomOf="@+id/imageView19"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:id="@+id/imageView21"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView22"
+                app:layout_constraintStart_toEndOf="@+id/imageView20"
+                app:layout_constraintTop_toBottomOf="@+id/imageView18"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:id="@+id/imageView20"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView21"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView17"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:id="@+id/imageView19"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView18"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:id="@+id/imageView18"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                app:layout_constraintEnd_toStartOf="@+id/imageView19"
+                app:layout_constraintStart_toEndOf="@+id/imageView17"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:id="@+id/imageView17"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                app:layout_constraintEnd_toStartOf="@+id/imageView18"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView4"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:id="@+id/imageView16"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toStartOf="@+id/imageView15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:id="@+id/imageView15"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toStartOf="@+id/imageView14"
+                app:layout_constraintStart_toEndOf="@+id/imageView16"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:id="@+id/imageView14"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView15"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:id="@+id/imageView13"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toStartOf="@+id/imageView12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView16"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:id="@+id/imageView12"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toStartOf="@+id/imageView11"
+                app:layout_constraintStart_toEndOf="@+id/imageView13"
+                app:layout_constraintTop_toBottomOf="@+id/imageView15"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:id="@+id/imageView11"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView12"
+                app:layout_constraintTop_toBottomOf="@+id/imageView14"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:id="@+id/imageView10"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toStartOf="@+id/imageView9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView13"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:id="@+id/imageView9"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toStartOf="@+id/imageView8"
+                app:layout_constraintStart_toEndOf="@+id/imageView10"
+                app:layout_constraintTop_toBottomOf="@+id/imageView12"
+                tools:ignore="ImageContrastCheck"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:id="@+id/imageView8"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView9"
+                app:layout_constraintTop_toBottomOf="@+id/imageView11"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:id="@+id/imageView7"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toStartOf="@+id/imageView6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView10"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:id="@+id/imageView6"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toStartOf="@+id/imageView5"
+                app:layout_constraintStart_toEndOf="@+id/imageView7"
+                app:layout_constraintTop_toBottomOf="@+id/imageView9"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:id="@+id/imageView5"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView6"
+                app:layout_constraintTop_toBottomOf="@+id/imageView8"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:id="@+id/imageView4"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toStartOf="@+id/imageView3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView7"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:id="@+id/imageView3"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toStartOf="@+id/imageView2"
+                app:layout_constraintStart_toEndOf="@+id/imageView4"
+                app:layout_constraintTop_toBottomOf="@+id/imageView6"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:id="@+id/imageView2"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toBottomOf="@+id/imageView5"
+                tools:srcCompat="@tools:sample/avatars" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/goBtn"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="100dp"
+        android:alpha="0.8"
+        android:background="@color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/circle_stroke"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:alpha="0.8"
+        android:text="Chose Any One Image in Your Mind and Go"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/goBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.8"
+        android:text="Go"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/goBtn"
+        app:layout_constraintEnd_toEndOf="@+id/goBtn"
+        app:layout_constraintStart_toStartOf="@+id/goBtn"
+        app:layout_constraintTop_toTopOf="@+id/goBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
