@@ -4,10 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/MindReadingGame/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.143" />
+        <entry key="..\:/MindReadingGame/app/src/main/res/drawable/bg_box.xml" value="0.143" />
         <entry key="..\:/MindReadingGame/app/src/main/res/drawable/circle_stroke.xml" value="0.143" />
         <entry key="..\:/MindReadingGame/app/src/main/res/drawable/ic_baseline_arrow_right_alt_24.xml" value="0.209" />
         <entry key="..\:/MindReadingGame/app/src/main/res/drawable/ic_launcher_background.xml" value="0.143" />
-        <entry key="..\:/MindReadingGame/app/src/main/res/layout-land/activity_game.xml" value="0.33" />
+        <entry key="..\:/MindReadingGame/app/src/main/res/layout-land/activity_game.xml" value="0.18" />
         <entry key="..\:/MindReadingGame/app/src/main/res/layout-land/activity_game_finish.xml" value="0.22" />
         <entry key="..\:/MindReadingGame/app/src/main/res/layout-land/activity_main.xml" value="0.22" />
         <entry key="..\:/MindReadingGame/app/src/main/res/layout-land/activity_splash_screen.xml" value="0.25" />
