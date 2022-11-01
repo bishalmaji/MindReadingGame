@@ -21,8 +21,8 @@ public class GameFinishActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        hideSystemBar();
         setContentView(R.layout.activity_game_finish);
+
         View decorView = getWindow().getDecorView();
         decorView.setOnSystemUiVisibilityChangeListener
                 (new View.OnSystemUiVisibilityChangeListener() {
@@ -45,8 +45,7 @@ public class GameFinishActivity extends AppCompatActivity {
                         }
                     }
                 });
-
-
+        hideSystemBar();
         KenBurnsView image=findViewById(R.id.game_finish_iv);
         ImageView finalImage=findViewById(R.id.game_finish_image);
         Button finishGame=findViewById(R.id.finishGame);
